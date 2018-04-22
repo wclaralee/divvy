@@ -8,4 +8,5 @@ Rails.application.routes.draw do
 
 	get "/new", to: "transactions#new", as: "new_transactions"
 
+	post "/users/edit", to: "user#update"
 end
