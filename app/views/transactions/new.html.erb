@@ -1,7 +1,8 @@
 <h1> Create New Transaction </h1>
-<%= simple_form_for @transaction, :url => create_path do |f| %>
-  <%= f.input :description %>
-  <%= f.input :amount %>
+<%= simple_form_for @transaction, :url => create_transaction_path do |f| %>
+  <%= f.input_field :description %>
+  <%= f.input_field :amount %>
+  <%= f.input :participating_users, collection: @transaction.participating_users %>
 
   <%= f.button :submit, class: "create-transaction-btn" %>
 <% end %>

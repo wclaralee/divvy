@@ -5,6 +5,7 @@ Rails.application.routes.draw do
 
   root to: "home#index"
 
-  get "/new", to: "transactions#new", as: "new_transactions"
+  get "/transactions/new", to: "transactions#new"
+  post "/transactions/create", to: "transactions#create", as: "create_transaction"
 
 end
